@@ -406,10 +406,12 @@ export default function Home() {
             <StatItem value={2000} suffix="+" label="Researchers" />
             <StatItem value={50} suffix="+" label="Paper Discussions" />
             <StatItem value={12} suffix="+" label="Reading Groups" />
-            <StatItem value={100} suffix="%" label="Free Always" />
+            <StatItem value={100} suffix="%" label="Dedicated Guidance" />
           </div>
         </div>
       </section>
+
+
 
       {/* ── WHAT WE DO ── */}
       <section style={{ padding: '6rem 0' }} data-testid="what-we-do-section">

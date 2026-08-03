@@ -20,7 +20,7 @@ const comparisonRows = [
   { label: 'Platform Data Ownership', di: true, discord: false, reddit: false, rg: false },
   { label: 'LaTeX / Math Rendering', di: true, discord: false, reddit: false, rg: true },
   { label: 'Academic Profile & Reputation', di: true, discord: false, reddit: 'partial', rg: true },
-  { label: 'Free Always', di: true, discord: true, reddit: true, rg: 'partial' },
+  { label: 'Senior-Junior Mentorship', di: true, discord: 'partial', reddit: false, rg: false },
 ];
 
 function CompareCell({ val }) {
@@ -146,7 +146,7 @@ export default function About() {
                 {[
                   { label: 'Mission', value: 'Most engaged Indian CS research community', icon: '🎯' },
                   { label: 'Vision', value: 'Default home of Indian AI/CS research discourse', icon: '🔭' },
-                  { label: 'Model', value: 'Free forever. Community-first. Always.', icon: '♾️' },
+                  { label: 'Model', value: 'Senior-Junior Mentorship & Community', icon: '🎯' },
                   { label: 'Focus', value: 'India-specific research context and ecosystem', icon: '🇮🇳' },
                 ].map(item => (
                   <div key={item.label} className="glass-card" style={{ padding: '1.25rem', border: '1px solid rgba(26,86,219,0.15)' }}>
@@ -276,7 +276,7 @@ export default function About() {
               img={NAVNEET_IMG}
               name="Navneet Panchayan"
               title="Co-Founder & CTO"
-              currentRole="Generative AI Engineer"
+              currentRole="Senior Software Engineer 1"
               currentOrg="HCLSoftware"
               icon={Code2}
               accentColor="#7C3AED"
@@ -284,7 +284,7 @@ export default function About() {
                 'MTech in Computer Science (Specialization: AI) — IIT BHU, Varanasi',
                 'BTech in Computer Science — BIT Durg',
               ]}
-              bio="Navneet brings deep technical expertise in Generative AI and modern ML systems to DeepIntellect AI. As a GenAI Engineer at HCLSoftware and an alumnus of the same IIT BHU AI program as Thansen, he has hands-on experience with the latest LLM architectures, RAG systems, and production AI deployments. He leads the technical architecture of DeepIntellect Café — ensuring the platform is fast, reliable, and built to scale with the growing Indian research community. His academic and professional background makes him uniquely qualified to build tools that researchers actually need."
+              bio="Navneet brings deep technical expertise in ML models and Generative AI technology to DeepIntellect AI. As a Senior Software Engineer 1 at HCLSoftware and an alumnus of IIT BHU MTech CS (AI), he has extensive experience across LLMs, machine learning models, and complex AI systems. Having cleared & interviewed with top tech leaders including Oracle, Walmart, Samsung Bangalore, and more, he mentors aspiring engineers on high-impact tech interviews and cutting-edge GenAI architectures."
               delay={150}
             />
             <FounderCard
@@ -321,7 +321,7 @@ export default function About() {
             <ValueCard icon={Shield} title="Intellectual Honesty" description="We critique ideas, not people. Disagreement is healthy and encouraged. Peer review culture isn't optional — it's the foundation." color="#60a5fa" delay={0} />
             <ValueCard icon={Users} title="Collaboration Over Competition" description="Research advances when knowledge is shared, not hoarded. Helping peers publish is as valuable as publishing yourself." color="#a78bfa" delay={150} />
             <ValueCard icon={Globe} title="India-First Perspective" description="We center the Indian research ecosystem: IIT/NIT culture, stipend realities, compute constraints, advisor dynamics, fellowship systems." color="#34d399" delay={300} />
-            <ValueCard icon={Heart} title="Open & Free Always" description="Core access to DeepIntellect Café will always be free. Great research communities shouldn't have paywalls. Period." color="#fbbf24" delay={450} />
+            <ValueCard icon={Heart} title="Senior-Junior Mentorship" description="Built for students and postgrads to share real interview experiences, guidance, and academic support." color="#fbbf24" delay={450} />
           </div>
         </div>
       </section>

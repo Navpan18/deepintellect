@@ -6,6 +6,7 @@ import Logo from './Logo';
 const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/about' },
+  { label: 'Alum Connect', path: '/alum-connect', highlight: true },
   { label: 'Community', path: '/community' },
   { label: 'Resources', path: '/resources' },
   { label: 'YouTube', path: 'https://www.youtube.com/@DeepIntellactAI', external: true },
@@ -32,13 +33,13 @@ export default function Navbar() {
       style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
         transition: 'all 0.3s ease',
-        background: scrolled ? 'rgba(15,23,42,0.95)' : 'transparent',
-        backdropFilter: scrolled ? 'blur(20px)' : 'none',
-        borderBottom: scrolled ? '1px solid rgba(255,255,255,0.08)' : 'none',
+        background: scrolled ? 'rgba(15,23,42,0.95)' : 'rgba(15,23,42,0.85)',
+        backdropFilter: 'blur(20px)',
+        borderBottom: '1px solid rgba(255,255,255,0.08)',
         boxShadow: scrolled ? '0 4px 24px rgba(0,0,0,0.3)' : 'none',
       }}
     >
-      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 1.5rem' }}>
+      <div style={{ maxWidth: 1280, margin: '0 auto', padding: '0 1rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: 64 }}>
 
           {/* Logo */}
@@ -62,8 +63,8 @@ export default function Navbar() {
             </div>
           </Link>
 
-          {/* Desktop Nav */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: 4 }} className="hidden md:flex">
+          {/* Desktop Nav (Hidden on screens below lg / 1024px) */}
+          <div className="hidden lg:flex lg:items-center lg:gap-1">
             {navLinks.map((link) =>
               link.external ? (
                 <a
@@ -72,9 +73,9 @@ export default function Navbar() {
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{
-                    display: 'flex', alignItems: 'center', gap: 5,
-                    padding: '7px 14px', borderRadius: 8,
-                    fontSize: 14, fontWeight: 500,
+                    display: 'flex', alignItems: 'center', gap: 4,
+                    padding: '6px 10px', borderRadius: 8,
+                    fontSize: 13, fontWeight: 500,
                     color: '#94A3B8', textDecoration: 'none',
                     transition: 'all 0.2s ease',
                   }}
@@ -89,15 +90,16 @@ export default function Navbar() {
                   key={link.label}
                   to={link.path}
                   style={{
-                    padding: '7px 14px', borderRadius: 8,
-                    fontSize: 14, fontWeight: 500,
-                    color: isActive(link.path) ? '#F1F5F9' : '#94A3B8',
-                    background: isActive(link.path) ? 'rgba(255,255,255,0.08)' : 'transparent',
+                    padding: '6px 10px', borderRadius: 8,
+                    fontSize: 13, fontWeight: link.highlight ? 600 : 500,
+                    color: link.highlight ? '#DDD6FE' : (isActive(link.path) ? '#F1F5F9' : '#94A3B8'),
+                    background: link.highlight ? 'rgba(124, 58, 237, 0.2)' : (isActive(link.path) ? 'rgba(255,255,255,0.08)' : 'transparent'),
+                    border: link.highlight ? '1px solid rgba(124, 58, 237, 0.3)' : '1px solid transparent',
                     textDecoration: 'none',
                     transition: 'all 0.2s ease',
                   }}
-                  onMouseEnter={e => { if (!isActive(link.path)) { e.currentTarget.style.color = '#F1F5F9'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; }}}
-                  onMouseLeave={e => { if (!isActive(link.path)) { e.currentTarget.style.color = '#94A3B8'; e.currentTarget.style.background = 'transparent'; }}}
+                  onMouseEnter={e => { if (!isActive(link.path) && !link.highlight) { e.currentTarget.style.color = '#F1F5F9'; e.currentTarget.style.background = 'rgba(255,255,255,0.06)'; }}}
+                  onMouseLeave={e => { if (!isActive(link.path) && !link.highlight) { e.currentTarget.style.color = '#94A3B8'; e.currentTarget.style.background = 'transparent'; }}}
                   data-testid={`nav-${link.label.toLowerCase()}`}
                 >
                   {link.label}
@@ -106,39 +108,37 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* CTA */}
-          <div className="hidden md:flex">
+          {/* Desktop CTA (Hidden on screens below lg / 1024px) */}
+          <div className="hidden lg:flex">
             <Link
               to="/join"
               className="btn-gradient"
-              style={{ fontSize: 13, padding: '8px 18px' }}
+              style={{ fontSize: 13, padding: '7px 16px' }}
               data-testid="nav-join-cta"
             >
               Join the Café →
             </Link>
           </div>
 
-          {/* Mobile toggle */}
+          {/* Mobile/Tablet toggle button (ONLY visible below 1024px) */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             style={{
-              padding: 10, borderRadius: 8, border: 'none', cursor: 'pointer',
-              background: 'transparent', color: '#94A3B8',
-              minHeight: '44px',
-              minWidth: '44px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
+              padding: 8, borderRadius: 8, border: 'none', cursor: 'pointer',
+              background: 'rgba(255,255,255,0.05)', color: '#F1F5F9',
+              minHeight: '40px',
+              minWidth: '40px',
             }}
-            className="md:hidden"
+            className="flex lg:hidden items-center justify-center"
             data-testid="nav-mobile-toggle"
+            aria-label="Toggle navigation menu"
           >
-            {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
       </div>
 
-      {/* Mobile menu */}
+      {/* Mobile/Tablet dropdown menu (ONLY visible below 1024px when open) */}
       {mobileOpen && (
         <div
           style={{
@@ -148,7 +148,7 @@ export default function Navbar() {
             overflowY: 'auto',
           }}
           data-testid="mobile-menu"
-          className="md:hidden"
+          className="block lg:hidden"
         >
           <div style={{ padding: '12px 16px', display: 'flex', flexDirection: 'column', gap: 4 }}>
             {navLinks.map((link) =>
@@ -178,9 +178,9 @@ export default function Navbar() {
                   to={link.path}
                   style={{
                     padding: '12px 14px', borderRadius: 8,
-                    fontSize: 14, fontWeight: 500,
-                    color: isActive(link.path) ? '#F1F5F9' : '#94A3B8',
-                    background: isActive(link.path) ? 'rgba(26,86,219,0.15)' : 'transparent',
+                    fontSize: 14, fontWeight: link.highlight ? 700 : 500,
+                    color: link.highlight ? '#C084FC' : (isActive(link.path) ? '#F1F5F9' : '#94A3B8'),
+                    background: isActive(link.path) ? 'rgba(26,86,219,0.15)' : (link.highlight ? 'rgba(124,58,237,0.15)' : 'transparent'),
                     textDecoration: 'none',
                     transition: 'all 0.2s ease',
                     minHeight: '44px',

@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
+import AlumConnect from './pages/AlumConnect';
 import Community from './pages/Community';
 import Resources from './pages/Resources';
 import Contact from './pages/Contact';
@@ -26,6 +27,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/alum-connect" element={<AlumConnect />} />
             <Route path="/community" element={<Community />} />
             <Route path="/resources" element={<Resources />} />
             <Route path="/join" element={<Contact />} />

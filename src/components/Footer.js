@@ -57,6 +57,7 @@ export default function Footer() {
               {[
                 { label: 'Home', path: '/' },
                 { label: 'About', path: '/about' },
+                { label: 'Alum Connect', path: '/alum-connect' },
                 { label: 'Community', path: '/community' },
                 { label: 'Resources', path: '/resources' },
                 { label: 'Join', path: '/join' },
@@ -95,7 +96,7 @@ export default function Footer() {
             © {new Date().getFullYear()} DeepIntellect AI
           </p>
           <p style={{ color: '#334155', fontSize: 'clamp(11px, 2vw, 12px)', fontFamily: 'JetBrains Mono, monospace' }}>
-            Made in India — Free Always
+            Made in India
           </p>
         </div>
       </div>
