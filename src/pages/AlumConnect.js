@@ -154,8 +154,7 @@ export default function AlumConnect() {
           IIT BHU M.Tech CS Alum Connect - Placement & Internship Guidance
         </h1>
         <p>
-          Direct mentorship from IIT BHU postgrads working at Oracle,
-          HCLSoftware, Samsung Noida, Axtria, and Nitor Infotech.
+          Direct mentorship from IIT BHU postgrads working at top tier companies.
         </p>
       </div>
 
@@ -708,8 +707,7 @@ export default function AlumConnect() {
                 margin: "10px auto 0",
               }}
             >
-              IIT BHU postgrads working across industry leaders like Oracle,
-              HCLSoftware, Samsung Noida, Axtria, and Nitor Infotech.
+              IIT BHU postgrads working across top tier companies.
             </p>
           </div>
 
