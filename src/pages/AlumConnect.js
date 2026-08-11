@@ -250,9 +250,8 @@ export default function AlumConnect() {
               }}
             >
               Learn directly from IIT BHU M.Tech CS postgrads who navigated
-              campus drives, cleared top-tier tech interviews (Oracle,
-              HCLSoftware, Samsung Noida, Axtria, Nitor Infotech, and more), and
-              are helping juniors succeed.
+              campus drives, cleared top-tier tech interviews and are helping
+              juniors succeed.
             </p>
 
             {/* Quick Cohort Badges */}
