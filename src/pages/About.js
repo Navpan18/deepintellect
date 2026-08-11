@@ -7,8 +7,8 @@ import {
 } from 'lucide-react';
 import useReveal from '../hooks/useReveal';
 
-const THANSEN_IMG = "https://customer-assets.emergentagent.com/job_1c1217d3-60c8-4e1f-a67a-586a12ae3b7f/artifacts/wokkg6ut_thansen.jpeg";
-const NAVNEET_IMG = "https://customer-assets.emergentagent.com/job_1c1217d3-60c8-4e1f-a67a-586a12ae3b7f/artifacts/k261rtfv_navneet.jfif";
+const THANSEN_IMG = "/images/thansen_dp.jpeg";
+const NAVNEET_IMG = "/images/navneet.jpg";
 const SHUBHI_IMG = "https://customer-assets.emergentagent.com/job_1c1217d3-60c8-4e1f-a67a-586a12ae3b7f/artifacts/pyqojruz_shubhi.jpeg";
 
 const comparisonRows = [
@@ -269,7 +269,7 @@ export default function About() {
                 'MTech in Computer Science (Specialization: AI) — IIT BHU, Varanasi',
                 'BTech in Computer Science — NIT Raipur',
               ]}
-              bio="Thansen built DeepIntellect AI to solve the isolation problem he personally experienced during his research journey. Having navigated both top-tier Indian research institutions — IIT BHU and NIT Raipur — and the high-performance engineering culture at Oracle, he uniquely understands both the challenges of Indian academic research and what researchers need to thrive professionally. He founded DeepIntellect AI to be the community and platform he wished had existed when he started — one that takes Indian researchers seriously, speaks their language, and genuinely accelerates their growth."
+              bio="I am a Computer Science and Artificial Intelligence professional, researcher, founder, and educator with an M.Tech in AI from IIT (BHU) Varanasi and a B.Tech in Computer Science Engineering from NIT Raipur. I am the Founder of DeepIntellect AI, focused on building a community connecting students, researchers, alumni, and technology professionals, and the Co-Founder of Vidyakunj Classes, an educational initiative for IIT-JEE aspirants. At IIT (BHU), I served as the Training and Placement Representative for the M.Tech CSE batch, managing placement activities, coordinating with recruiters, and supporting my peers throughout the recruitment process. I secured a Day 0 placement with Oracle and was shortlisted by leading organizations including Microsoft, SAP, Citi, Samsung Electronics, Walmart Global Tech India, Flipkart, Axtria, and Baya Systems Virtusa. Through the off-campus process, I subsequently secured opportunities with Wipro as an AI Engineer, Nokia R&D as an AI Engineer II, Arista Networks as an SDE, and 5C Network as an AI Scientist. My work spans AI/ML, Generative AI, Computer Vision, research, software engineering, entrepreneurship, education, and technical leadership."
               delay={0}
             />
             <FounderCard
@@ -284,7 +284,7 @@ export default function About() {
                 'MTech in Computer Science (Specialization: AI) — IIT BHU, Varanasi',
                 'BTech in Computer Science — BIT Durg',
               ]}
-              bio="Navneet brings deep technical expertise in ML models and Generative AI technology to DeepIntellect AI. As a Senior Software Engineer 1 at HCLSoftware and an alumnus of IIT BHU MTech CS (AI), he has extensive experience across LLMs, machine learning models, and complex AI systems. Having cleared & interviewed with top tech leaders including Oracle, Walmart, Samsung Bangalore, and more, he mentors aspiring engineers on high-impact tech interviews and cutting-edge GenAI architectures."
+              bio="I’m a Senior Software Engineer at HCLSoftware, currently working with the ML team on Unica+. I completed my M.Tech in Computer Science with a specialization in Artificial Intelligence from IIT (BHU) Varanasi in 2026. During my time at IIT (BHU), I also secured multiple opportunities through the placement drive, with more than 13 interview shortlist. I’m also the CTO of DeepIntellect AI, where we aim to build one of India’s strongest AI research communities and foster collaboration among researchers and AI enthusiasts."
               delay={150}
             />
             <FounderCard

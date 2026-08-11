@@ -664,3 +664,73 @@ body {
     font-size: 18px !important;
   }
 }
+
+/* Speaker Card Grid Container */
+.speakers-grid-container {
+  align-items: start;
+}
+
+/* Ultra-smooth Pop-Up & Card Expansion (Zero Lag) */
+.speaker-card {
+  position: relative;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Pop-Up & Scale */
+.speaker-card:hover {
+  z-index: 30;
+  transform: translateY(-8px) scale(1.03);
+  border-color: rgba(124, 58, 237, 0.55) !important;
+  box-shadow: 0 25px 50px -10px rgba(124, 58, 237, 0.4),
+              0 0 30px rgba(59, 130, 246, 0.25);
+}
+
+/* Smooth CSS Grid Row Unroll (Zero Repaint Lag) */
+.scroll-unroll-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.35s ease,
+              margin-top 0.35s ease;
+}
+
+.speaker-card:hover .scroll-unroll-wrapper {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 14px;
+}
+
+.scroll-unroll-inner {
+  overflow: hidden;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Quote Box Styling for Thansen's closing message */
+.quote-box {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-left: 3px solid #8B5CF6;
+  background: rgba(139, 92, 246, 0.12);
+  border-radius: 0 10px 10px 0;
+  font-style: italic;
+  font-weight: 600;
+  color: #DDD6FE;
+  font-size: 13px;
+  line-height: 1.5;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+
+
